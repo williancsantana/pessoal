@@ -1,14 +1,16 @@
 package teste
 
-class Sucessao_Planta {
+class PlantaSucessao {
 
     String descricao
     
-    static belongsTo = [planta:Planta]
+    Planta planta
+    //static belongsTo = [planta:Planta]
     
-    static constraints = {
+    static mapping = {
         table "tb_planta_sucessao"
         descricao column: "descricao"
+        version false
         //planta column: "fk_planta"
     }
 }

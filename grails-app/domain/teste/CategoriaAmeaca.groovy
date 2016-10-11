@@ -1,13 +1,10 @@
 package teste
 
-class DispersaoPlanta {
-
+class CategoriaAmeaca {
     String descricao
     
-    //static belongsTo = [planta:Planta]
-    
     static mapping = {
-        table "plantas_dev.tb_planta_dispersao"
+        table "plantas_dev.tb_categoria_ameaca"
         descricao column: "descricao"
         version false
     }
