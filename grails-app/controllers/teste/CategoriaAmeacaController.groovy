@@ -9,11 +9,12 @@ class CategoriaAmeacaController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
+        params.max = Math.min(max ?: 10, 100)        
         respond CategoriaAmeaca.list(params), model:[categoriaAmeacaCount: CategoriaAmeaca.count()]
     }
 
     def show(CategoriaAmeaca categoriaAmeaca) {
+        println(categoriaAmeaca.descricao)
         respond categoriaAmeaca
     }
 

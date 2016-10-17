@@ -11,14 +11,13 @@ class Planta {
     DispersaoPlanta dispersaoPlanta
     PlantaSucessao plantaSucessao
     
-//    static hasOne = [dispersaoPlanta: DispersaoPlanta]
-//    static hasOne = [sucessaoPlanta: SucessaoPlanta]
     //static hasMany = [cotacaoPlanta: CotacaoPlanta]
     
     
     
     static mapping = {
-        table "plantas_dev.tb_planta"
+        //table "plantas_dev.tb_planta"
+        table "tb_planta"
         nome column: "nome"
         nomeCientifico column: "nome_cientifico"
         ameacadoExtincao column: "ameacado_extincao"
@@ -26,6 +25,7 @@ class Planta {
         nativoCerrado column: "nativo_cerrado"
         dispersaoPlanta column: "fk_dispersao_planta"
         plantaSucessao column: "fk_sucessao_planta"
+        id generator: 'sequence'
         version false
     }
 }
